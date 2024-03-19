@@ -37,10 +37,12 @@
                 :image="project.image"
             />
         </div>
-        <div class="footer">
-            <p>Contact Me</p>
-            <span></span>
-        </div>
+        <!-- <div class="footer">
+            <div class="text">
+                <p>Learn More...</p> 
+                <i class="fa fa-github" style="font-size:24px"></i>
+            </div>
+        </div> -->
     </div>
 </template>
 
@@ -180,12 +182,16 @@ export default {
 }
 
 .footer {
-    display: block;
-    background-color: var(--vt-c-blue-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--vt-c-blue-4);
     height: 250px;
-    width: 100vw;
-    margin: -50px -58px 0 -58px;
 }
 
+.footer .text {
+    font-family: 'raleway';
+    text-align: center;
+}
 </style>
 
