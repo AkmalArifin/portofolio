@@ -63,7 +63,7 @@ export default {
                 title: 'Femu', 
                 paragraph:'I had the opportunity to collaborate with a professor at Virginia Tech, USA, on contributions to the open-source FEMU project, a fast, accurate, scalable, and extensible NVMe SSD Emulator. My work focused on implementing a configuration interface for blackbox mode, specifically configure latency, SSD architecture and garbage collection threshold. This contribution was thoroughly tested to ensure proper configuration.',
                 link: "https://github.com/vtess/FEMU",
-                image: "public/ssd.png",
+                image: "./ssd.png",
             },
             { 
                 id: 2, 
@@ -77,7 +77,7 @@ export default {
                 title: 'Rama', 
                 paragraph:"As part of my undergraduate coursework, I worked on a project to develop a website for an external race management project, RAMA. In this project, I'm leveraging my design and front-end development skills to contribute to the user experience and functionality of the website.",
                 link: "https://gitlab.informatika.org/ilhampratama2109/if3250_2023_k01_11_pro-04",
-                image: "public/run.png",
+                image: "/public/run.png",
             }
         ])
         return {
