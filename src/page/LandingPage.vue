@@ -7,7 +7,7 @@
                 <p>I'm an <span style="font-weight:700; color:var(--vt-c-blue-1)">undergraduate CS student</span> diving deep into the world of computing.</p>
             </div>
             <div class="photo">
-                <img src="/public/photo-profile.jpg"/>
+                <img src="/photo-profile.jpg"/>
             </div>
         </div>
         <div class="about">
