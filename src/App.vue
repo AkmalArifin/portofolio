@@ -7,12 +7,12 @@
 <style scoped>
 
 .main-content {
-  margin: 0 60px 100px;
+  margin: 0 20px 60px;
 }
 
 @media (min-width: 512px) {
   .main-content {
-    margin: 0 20px 60px;
+    margin: 0 60px 100px;
   }
 }
 

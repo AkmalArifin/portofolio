@@ -1,20 +1,24 @@
 <template>
     <div>
         <div class="graphics">
-            <!-- <img class="blue-landing" src="/blue-landing.png" />
-            <img class="yellow-landing" src="/yellow-landing.png" />
-            <img class="yellow-1" src="/yellow-1.png" />
-            <img class="blue-1" src="/blue-1.png" /> -->
+            <!-- <img class="yellow-1" src="/yellow-1.png" /> -->
+            <!-- <img class="blue-1" src="/blue-1.png" /> -->
         </div>
         
         <section class="hello">
-            <div class="text">
-                <h1>Hi, my<br>name is <span style="font-weight: 700;">Akmal</span><span style="color:var(--vt-c-orange-1)">.</span></h1>
-                <br><br>
-                <p>I'm an <span style="font-weight:700; color:var(--vt-c-blue-1)">undergraduate CS student</span> diving deep into the world of computing.</p>
+            <div class="graphic">
+                <!-- <img class="blue-landing" src="/blue-landing.png" /> -->
+                <!-- <img class="yellow-landing" src="/yellow-landing.png" /> -->                
             </div>
-            <div class="photo">
-                <img src="/photo-profile.jpg"/>
+            <div class="hello-content">
+                <div class="photo">
+                    <img src="/photo-profile.jpg"/>
+                </div>
+                <div class="text">
+                    <h1>Hi, my<br>name is <span style="font-weight: 700;">Akmal</span><span style="color:var(--vt-c-orange-1)">.</span></h1>
+                    <br><br>
+                    <p>I'm an <span style="font-weight:700; color:var(--vt-c-blue-1)">undergraduate CS student</span> diving deep into the world of computing.</p>
+                </div>
             </div>
         </section>
 
@@ -114,37 +118,40 @@ export default {
 }
 
 .hello {
-    display: flex;
-    flex-direction: row;
-    
-    margin: 250px auto; 
+    display: relative;
     min-height: 100vh;
 }
 
-.hello .text {
-    grid-column: 1 / span 1;
-    margin: auto;
+.hello-content {
+    display: flex;
+    flex-direction: row;
+    gap: minmax(20px, auto);
+    align-items: center;
+    justify-content: space-evenly;
+    height: calc(100vh - 40px)
 }
 
-.hello .photo {
-    grid-column: 2 / span 1;
+.hello-content .text {
+    width: 550px;
+    order: 1;
 }
 
-.hello h1 {
+.hello-content .text h1 {
     font-family: 'PT Serif';
     font-size: 64px;
 }
 
-.hello p {
+.hello-content .text p {
     font-family: 'raleway';
     font-size: 28px;
     font-style: italic;
 }
 
-.hello .photo {
+.hello-content .photo {
     display: flex;
     justify-content: center;
     align-items: center;
+    order: 2;
 }
 
 .photo img {
@@ -215,5 +222,29 @@ export default {
     font-family: 'raleway';
     text-align: center;
 }
+
+@media (max-width: 1024px) {
+    .hello-content {
+        position: relative;
+        display: block;
+    }
+
+    .hello-content .text {
+        text-align: center;
+        margin-top: 40px;
+        width: calc(100vw - 160px);
+    }
+} 
+
+@media (max-width: 512px) {
+    .hello-content .photo img {
+        width: 250px;
+    }
+    .hello-content .text {
+        margin-top: 10px;
+        width: calc(100vw - 80px);
+    }
+}
+
 </style>
 
