@@ -1,5 +1,11 @@
 <template>
     <div>
+        <div class="graphics">
+            <!-- <img class="blue-landing" src="/blue-landing.png" />
+            <img class="yellow-landing" src="/yellow-landing.png" />
+            <img class="yellow-1" src="/yellow-1.png" />
+            <img class="blue-1" src="/blue-1.png" /> -->
+        </div>
         <div class="landing-page">
             <div class="text">
                 <h1>Hi, my<br>name is <span style="font-weight: 700;">Akmal</span><span style="color:var(--vt-c-orange-1)">.</span></h1>
@@ -89,6 +95,19 @@ export default {
 </script>
 
 <style scoped>
+
+.graphics {
+    position: absolute;
+}
+
+.blue-landing {
+    width: 600px;
+}
+
+.yellow-landing {
+    width: 600px;
+    left: 0px;
+}
 
 .landing-page {
     display: grid;
