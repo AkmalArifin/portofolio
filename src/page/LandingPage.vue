@@ -46,7 +46,7 @@
                 :image="project.image"
             />
         </section>
-        
+
         <!-- <div class="footer">
             <div class="text">
                 <p>Learn More...</p> 
@@ -114,11 +114,10 @@ export default {
 }
 
 .hello {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
-    padding: 0 2rem;
-
+    display: flex;
+    flex-direction: row;
+    
+    margin: 250px auto; 
     min-height: 100vh;
 }
 
