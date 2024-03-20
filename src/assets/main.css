@@ -5,4 +5,9 @@ body {
   position: relative;
   min-height: calc(100vh - 40px);
   padding: 20px;
+  color: var(--text);
+  background: var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

@@ -6,7 +6,8 @@
             <img class="yellow-1" src="/yellow-1.png" />
             <img class="blue-1" src="/blue-1.png" /> -->
         </div>
-        <div class="landing-page">
+        
+        <section class="hello">
             <div class="text">
                 <h1>Hi, my<br>name is <span style="font-weight: 700;">Akmal</span><span style="color:var(--vt-c-orange-1)">.</span></h1>
                 <br><br>
@@ -15,8 +16,9 @@
             <div class="photo">
                 <img src="/photo-profile.jpg"/>
             </div>
-        </div>
-        <div class="about">
+        </section>
+
+        <section class="about">
             <div class="text">
                 <h1>Nice to meet you<span style="color: var(--vt-c-orange-1);">.</span></h1>
                 <br><br>
@@ -24,8 +26,9 @@
                 <br><br>
                 <p>As an Institut Teknologi Bandung CS student, I'm driven by an insatiable curiosity about the potential of computing. From computer systems to web development. I eager to learn more about code in future - <span style="font-weight: 600;">the more, the merrier</span>.</p>
             </div>
-        </div>
-        <div class="projects">
+        </section>
+
+        <section class="projects">
             <div class="opening">
                 <h1>My Projects<span style="color: var(--vt-c-orange-1)">.</span></h1>
                 <br><br>
@@ -42,7 +45,8 @@
                 :link="project.link"
                 :image="project.image"
             />
-        </div>
+        </section>
+        
         <!-- <div class="footer">
             <div class="text">
                 <p>Learn More...</p> 
@@ -109,7 +113,7 @@ export default {
     left: 0px;
 }
 
-.landing-page {
+.hello {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 40px;
@@ -118,27 +122,27 @@ export default {
     min-height: 100vh;
 }
 
-.landing-page .text {
+.hello .text {
     grid-column: 1 / span 1;
     margin: auto;
 }
 
-.landing-page .photo {
+.hello .photo {
     grid-column: 2 / span 1;
 }
 
-.landing-page h1 {
+.hello h1 {
     font-family: 'PT Serif';
     font-size: 64px;
 }
 
-.landing-page p {
+.hello p {
     font-family: 'raleway';
     font-size: 28px;
     font-style: italic;
 }
 
-.landing-page .photo {
+.hello .photo {
     display: flex;
     justify-content: center;
     align-items: center;
