@@ -1,21 +1,8 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem 2rem 0 2rem;
-  font-weight: normal;
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  /* #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  } */
+body {
+  background: var(--vt-c-white-soft);
+  position: relative;
+  min-height: calc(100vh - 40px);
+  padding: 20px;
 }
