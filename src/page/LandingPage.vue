@@ -264,7 +264,7 @@ export default {
     }
     
     .about {
-        margin: 100px 100px 50px;
+        margin: 100px 100px;
     }
 
     .about-content {
@@ -272,6 +272,18 @@ export default {
     }
 
     .about-graphics {
+        display: none;
+    }
+
+    .projects {
+        margin: 100px 100px;
+    }
+
+    .opening-content {
+        width: 100%;
+    }
+
+    .opening-graphics {
         display: none;
     }
 } 
@@ -291,11 +303,11 @@ export default {
     }
 
     .about {
-        margin: 0 25px;
+        margin: 50px 25px;
     }
 
-    .about-content {
-        width: 100%;
+    .projects {
+        margin: 50px 25px;
     }
 }
 
