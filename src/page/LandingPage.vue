@@ -6,7 +6,7 @@
         </div>
         
         <section class="hello">
-            <div class="graphic">
+            <div class="hello-graphics">
                 <!-- <img class="blue-landing" src="/blue-landing.png" /> -->
                 <!-- <img class="yellow-landing" src="/yellow-landing.png" /> -->                
             </div>
@@ -23,32 +23,46 @@
         </section>
 
         <section class="about">
-            <div class="text">
-                <h1>Nice to meet you<span style="color: var(--vt-c-orange-1);">.</span></h1>
-                <br><br>
-                <hr>
-                <br><br>
-                <p>As an Institut Teknologi Bandung CS student, I'm driven by an insatiable curiosity about the potential of computing. From computer systems to web development. I eager to learn more about code in future - <span style="font-weight: 600;">the more, the merrier</span>.</p>
+            <div class="about-graphics">
+                <p></p>
+            </div>
+            <div class="about-content">
+                <div class="text">
+                    <h1>Nice to meet you<span style="color: var(--vt-c-orange-1);">.</span></h1>
+                    <br><br>
+                    <hr>
+                    <br><br>
+                    <p>As an Institut Teknologi Bandung CS student, I'm driven by an insatiable curiosity about the potential of computing. From computer systems to web development. I eager to learn more about code in future - <span style="font-weight: 600;">the more, the merrier</span>.</p>
+                </div>
             </div>
         </section>
 
         <section class="projects">
+            
             <div class="opening">
-                <h1>My Projects<span style="color: var(--vt-c-orange-1)">.</span></h1>
-                <br><br>
-                <p>I'm passionate about applying my programming knowledge to solve real-world problems. To showcase this, I've undertaken several personal projects that you can see below.</p>
+                <div class="opening-graphics">
+                </div>
+                <div class="opening-content">
+                    <h1>My Projects<span style="color: var(--vt-c-orange-1)">.</span></h1>
+                    <br><br>
+                    <p>I'm passionate about applying my programming knowledge to solve real-world problems. To showcase this, I've undertaken several personal projects that you can see below.</p>
+                </div>
             </div>
+
             <br><br><br>
             <br><br><br>
-            <br><br><br>    
-            <ListProject 
-                v-for="project in projects"
-                :key="project.id"
-                :title="project.title"
-                :paragraph="project.paragraph"
-                :link="project.link"
-                :image="project.image"
-            />
+            <br><br><br>
+
+            <div class="projects-list">
+                <ListProject 
+                    v-for="project in projects"
+                    :key="project.id"
+                    :title="project.title"
+                    :paragraph="project.paragraph"
+                    :link="project.link"
+                    :image="project.image"
+                />
+            </div>
         </section>
 
         <!-- <div class="footer">
@@ -104,10 +118,6 @@ export default {
 
 <style scoped>
 
-.graphics {
-    position: absolute;
-}
-
 .blue-landing {
     width: 600px;
 }
@@ -159,48 +169,66 @@ export default {
 }
 
 .about {
-    padding: 100px 32px;
+    margin: 250px 200px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.about .text {
-    max-width: 550px;
+.about-content {
+    order: 1;
+    width: 50%;
+}
+.about-graphics {
+    order: 2;
+    width: 50%;
 }
 
-.about .text h1 {
+.about-content .text h1 {
     font-family: 'PT Serif';
     font-weight: 700;
     font-size: 48px;
 }
 
-.about .text hr {
+.about-content .text hr {
     width: 17%;
     border: 2px solid var(--vt-c-blue-1);
     border-radius: 2px;
 }
 
-.about .text p {
+.about-content .text p {
     font-family: 'Hind Siliguri';
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.2;
 }
 
 .projects {
-    padding: 100px 32px;
+    margin: 250px 200px;
 }
 
-.projects .opening {
-    max-width: 550px;
+.opening {
+    display: flex;
+    justify-content: space-between;
 }
 
-.projects .opening h1 {
+.opening-content {
+    order: 1;
+    width: 50%;
+}
+
+.opening-graphics {
+    order: 2;
+    width: 50%;
+}
+
+.opening-content h1 {
     font-family: 'PT Serif';
     font-weight: 700;
     font-size: 42px;
 }
 
-.projects .opening p {
+.opening-content p {
     font-family: 'Hind Siliguri';
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.2;
 }
 
@@ -234,15 +262,40 @@ export default {
         margin-top: 40px;
         width: calc(100vw - 160px);
     }
+    
+    .about {
+        margin: 100px 100px 50px;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-graphics {
+        display: none;
+    }
 } 
 
 @media (max-width: 512px) {
     .hello-content .photo img {
         width: 250px;
     }
+
     .hello-content .text {
         margin-top: 10px;
         width: calc(100vw - 80px);
+    }
+    
+    .hello-content .text h1 {
+        font-size: 48px;
+    }
+
+    .about {
+        margin: 0 25px;
+    }
+
+    .about-content {
+        width: 100%;
     }
 }
 
