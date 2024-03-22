@@ -89,7 +89,7 @@ export default {
             { 
                 id: 1, 
                 title: 'Femu', 
-                paragraph:'I had the opportunity to collaborate with a professor at Virginia Tech, USA, on contributions to the open-source FEMU project, a fast, accurate, scalable, and extensible NVMe SSD Emulator. My work focused on implementing a configuration interface for blackbox mode, specifically configure latency, SSD architecture and garbage collection threshold. This contribution was thoroughly tested to ensure proper configuration.',
+                paragraph:`Low-level programming has always been intimidating for me. Fortunately, I recently had the opportunity to work on an open-source project that required low-level work.The project is FEMU, a fast, accurate, scalable, and extensible NVMe SSD Emulator. I contributed by implementing a configuration interface for blackbox mode.`,
                 link: "https://github.com/vtess/FEMU",
                 image: "./ssd.png",
             },
@@ -169,7 +169,8 @@ export default {
 }
 
 .about {
-    margin: 250px 200px;
+    margin: 250px auto;
+    max-width: 80%;
     display: flex;
     justify-content: space-between;
 }
@@ -202,7 +203,8 @@ export default {
 }
 
 .projects {
-    margin: 250px 200px;
+    margin: 250px auto;
+    max-width: 80%;
 }
 
 .opening {
@@ -264,7 +266,7 @@ export default {
     }
     
     .about {
-        margin: 100px 100px;
+        margin: 100px auto;
     }
 
     .about-content {
@@ -276,7 +278,7 @@ export default {
     }
 
     .projects {
-        margin: 100px 100px;
+        margin: 100px auto;
     }
 
     .opening-content {
@@ -287,6 +289,16 @@ export default {
         display: none;
     }
 } 
+
+@media (max-width: 800px) {
+    .about {
+        max-width: 100%;
+    }
+
+    .projects {
+        max-width: 100%;
+    }
+}
 
 @media (max-width: 512px) {
     .hello-content .photo img {

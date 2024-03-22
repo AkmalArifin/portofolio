@@ -36,13 +36,12 @@ export default {
 
 .project-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin: 125px 0;
 }
 
 .project-image .image {
-    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,6 +53,7 @@ export default {
 
 .project-details {
     padding: 0px 32px;
+    max-width: 70%;
 }
 
 h1 {
@@ -85,5 +85,14 @@ p {
 hr {
     border: 2px solid var(--vt-c-blue-1);
     border-radius: 2px;
+}
+
+@media (max-width: 800px) {
+    .project-image {
+        display: none;
+    }
+    .project-details {
+        max-width: 100%;
+    }
 }
 </style>
