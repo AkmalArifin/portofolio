@@ -16,9 +16,8 @@
         </section>
 
         <section class="about">
-            <div class="about-graphics">
-                <p></p>
-            </div>
+            <img class="yellow-about" src="/yellow-line.png" />
+            <img class="blue-about" src="/blue-circle.png" />
             <div class="about-content">
                 <div class="text">
                     <h1>Nice to meet you<span style="color: var(--vt-c-orange-1);">.</span></h1>
@@ -33,8 +32,7 @@
         <section class="projects">
             
             <div class="opening">
-                <div class="opening-graphics">
-                </div>
+
                 <div class="opening-content">
                     <h1>My Projects<span style="color: var(--vt-c-orange-1)">.</span></h1>
                     <br><br>
@@ -117,13 +115,6 @@ export default {
     min-height: 100vh;
 }
 
-/* .hello-graphics {
-    position: absolut;
-    width: 100%;
-    height: 100vh;  
-    z-index: -1;
-} */
-
 .blue-landing {
     position: absolute;
     width: 600px;
@@ -177,10 +168,28 @@ export default {
 }
 
 .about {
+    position: relative;
     margin: 250px auto;
     max-width: 80%;
     display: flex;
     justify-content: space-between;
+}
+
+.yellow-about {
+    position: absolute;
+    width: 300px;
+    right: 20px;
+    top: 35px;
+    rotate: 15deg;
+    z-index: -1;
+}
+
+.blue-about {
+    position: absolute;
+    width: 250px;
+    right: -100px;
+    rotate: -5deg;
+    z-index: -1;
 }
 
 .about-content {
@@ -268,6 +277,14 @@ export default {
     }
 
     .yellow-landing {
+        display: none;
+    }
+
+    .blue-about {
+        display: none;
+    }
+
+    .yellow-about {
         display: none;
     }
 
