@@ -1,15 +1,8 @@
 <template>
     <div>
-        <div class="graphics">
-            <!-- <img class="yellow-1" src="/yellow-1.png" /> -->
-            <!-- <img class="blue-1" src="/blue-1.png" /> -->
-        </div>
-        
         <section class="hello">
-            <div class="hello-graphics">
-                <!-- <img class="blue-landing" src="/blue-landing.png" /> -->
-                <!-- <img class="yellow-landing" src="/yellow-landing.png" /> -->                
-            </div>
+            <img class="blue-landing" src="/blue-landing.png" />
+            <img class="yellow-landing" src="/yellow-landing.png" /> 
             <div class="hello-content">
                 <div class="photo">
                     <img src="/photo-profile.jpg"/>
@@ -118,18 +111,33 @@ export default {
 
 <style scoped>
 
+
+.hello {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* .hello-graphics {
+    position: absolut;
+    width: 100%;
+    height: 100vh;  
+    z-index: -1;
+} */
+
 .blue-landing {
+    position: absolute;
     width: 600px;
+    left: calc(-60px - 20px);
+    bottom: 0px;
+    z-index: -1;
 }
 
 .yellow-landing {
+    position: absolute;
     width: 600px;
-    left: 0px;
-}
-
-.hello {
-    display: relative;
-    min-height: 100vh;
+    right: -100px;
+    top: -20px;
+    z-index: -1;
 }
 
 .hello-content {
@@ -143,7 +151,7 @@ export default {
 
 .hello-content .text {
     width: 550px;
-    order: 1;
+    order: 2;
 }
 
 .hello-content .text h1 {
@@ -161,7 +169,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    order: 2;
+    order: 1;
 }
 
 .photo img {
@@ -254,6 +262,15 @@ export default {
 }
 
 @media (max-width: 1024px) {
+    
+    .blue-landing {
+        display: none;
+    }
+
+    .yellow-landing {
+        display: none;
+    }
+
     .hello-content {
         position: relative;
         display: block;

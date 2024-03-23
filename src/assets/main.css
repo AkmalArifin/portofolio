@@ -7,12 +7,15 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
 }
 
 #app {
   position: relative;
-  min-height: calc(100vh - 40px);
-  width: 100vw;
-  padding: 20px;
+  /* min-height: calc(100vh - 40px); */
+  min-height: 100vh;
+  /* width: calc(100vw - 10px); */
+  width: 100%;
+  /* padding: 20px; */
   overflow-x:hidden;
 }
