@@ -32,7 +32,7 @@
         <section class="projects">
             
             <div class="opening">
-
+                <img class="blue-box" src="/blue-box.png" />
                 <div class="opening-content">
                     <h1>My Projects<span style="color: var(--vt-c-orange-1)">.</span></h1>
                     <br><br>
@@ -178,7 +178,7 @@ export default {
 .yellow-about {
     position: absolute;
     width: 300px;
-    right: 20px;
+    right: 50px;
     top: 35px;
     rotate: 15deg;
     z-index: -1;
@@ -186,8 +186,8 @@ export default {
 
 .blue-about {
     position: absolute;
-    width: 250px;
-    right: -100px;
+    width: 220px;
+    right: -70px;
     rotate: -5deg;
     z-index: -1;
 }
@@ -216,7 +216,7 @@ export default {
 .about-content .text p {
     font-family: 'Hind Siliguri';
     font-size: 18px;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 .projects {
@@ -225,8 +225,17 @@ export default {
 }
 
 .opening {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+}
+
+.blue-box {
+    position: absolute;
+    width: 350px;
+    left: -20px;
+    top: -30px;
+    transform: scaleX(-1);
 }
 
 .opening-content {
@@ -234,21 +243,18 @@ export default {
     width: 50%;
 }
 
-.opening-graphics {
-    order: 2;
-    width: 50%;
-}
-
 .opening-content h1 {
     font-family: 'PT Serif';
     font-weight: 700;
     font-size: 42px;
+    text-align: right;
 }
 
 .opening-content p {
     font-family: 'Hind Siliguri';
     font-size: 18px;
-    line-height: 1.2;
+    line-height: 1.5;
+    text-align: right;
 }
 
 .projects hr {
