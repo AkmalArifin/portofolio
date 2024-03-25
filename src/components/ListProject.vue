@@ -37,18 +37,15 @@ export default {
 .project-wrapper {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     margin: 125px 0;
 }
 
 .project-image .image {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .project-image .image img {
-    width: 150px;
+    width: 200px;
 }
 
 .project-details {

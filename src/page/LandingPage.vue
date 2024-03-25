@@ -82,21 +82,21 @@ export default {
                 title: 'Femu', 
                 paragraph:`Low-level programming has always been intimidating for me. Fortunately, I recently had the opportunity to work on an open-source project that required low-level work.The project is FEMU, a fast, accurate, scalable, and extensible NVMe SSD Emulator. I contributed by implementing a configuration interface for blackbox mode.`,
                 link: "https://github.com/vtess/FEMU",
-                image: "./ssd.png",
+                image: "./ssd-graphics.png",
             },
             { 
                 id: 2, 
                 title: 'Autoscript Plot', 
                 paragraph:"In my role as a dormitory advisor, I'm responsible for generating monthly reports on resident performance. To ensure accurate and efficient reporting, I've developed an automated script that compiles resident statistics. This approach allows me to provide a data-driven overview of resident activity and well-being.",
                 link: "https://github.com/AkmalArifin/statistik-amalan-yaumi",
-                image: "./statistic.png",
+                image: "./statistic-graphics.png",
             },
             {
                 id: 3, 
                 title: 'Rama', 
                 paragraph:"As part of my undergraduate coursework, I worked on a project to develop a website for an external race management project, RAMA. In this project, I'm leveraging my design and front-end development skills to contribute to the user experience and functionality of the website.",
                 link: "https://gitlab.informatika.org/ilhampratama2109/if3250_2023_k01_11_pro-04",
-                image: "./run.png",
+                image: "./run-graphics.png",
             }
         ])
         return {
