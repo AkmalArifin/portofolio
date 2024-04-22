@@ -68,12 +68,14 @@
 <script>
 import { ref } from 'vue'
 import ListProject from "@/components/ListProject.vue";
+import PageLoader from "@/components/PageLoader.vue";
 
 export default {
     name: "LandingPage",
 
     components: {
-        ListProject
+        ListProject,
+        PageLoader,
     },
     setup() {
         const projects = ref([

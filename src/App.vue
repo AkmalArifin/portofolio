@@ -1,8 +1,25 @@
 <template>
   <main>
+    <PageLoader/>
     <RouterView class="main-content"/>
   </main>
 </template>
+
+<script>
+import PageLoader from "@/components/PageLoader.vue";
+
+export default {
+  name: "App",
+
+  components: {
+    PageLoader
+  }
+}
+</script>
+
+<script>
+
+</script>
 
 <style scoped>
 
