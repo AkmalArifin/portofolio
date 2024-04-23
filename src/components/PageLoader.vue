@@ -29,7 +29,7 @@ export default {
         background-size: 4%;
         height: 100vh;
         width: 100%;
-        z-index: 10;
+        z-index: 2;
         display: inline;
 
         animation-name: load;

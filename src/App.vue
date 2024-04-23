@@ -1,5 +1,6 @@
 <template>
   <main>
+    <Frame class="frame"/>
     <PageLoader/>
     <RouterView class="main-content"/>
   </main>
@@ -7,12 +8,14 @@
 
 <script>
 import PageLoader from "@/components/PageLoader.vue";
+import Frame from "@/components/Frame.vue";
 
 export default {
   name: "App",
 
   components: {
-    PageLoader
+    PageLoader,
+    Frame
   },
 }
 </script>
@@ -30,6 +33,12 @@ export default {
 @media (min-width: 512px) {
   .main-content {
     margin: 0 60px 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .frame {
+    display: none;
   }
 }
 

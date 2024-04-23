@@ -3,7 +3,7 @@
 body {
   background-color: var(--vt-c-white-soft);
   color: var(--text);
-  background: var(--bg);
+  background: var(--bg-mute);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
