@@ -5,12 +5,12 @@
             <img class="yellow-landing" src="/yellow-landing.png" /> 
             <div class="hello-content">
                 <div class="photo">
-                    <img src="/photo-profile.jpg"/>
+                    <img ref="photoProfile" class="photo-profile" src="/photo-profile.jpg"/>
                 </div>
                 <div class="text">
-                    <h1>Hi, my<br>name is <span style="font-weight: 700;">Akmal</span><span style="color:var(--vt-c-orange-1)">.</span></h1>
+                    <h1 ref="header" class="header">Hi, my<br>name is <span style="font-weight: 700;">Akmal</span><span style="color:var(--vt-c-orange-1)">.</span></h1>
                     <br><br>
-                    <p>I'm an <span style="font-weight:700; color:var(--vt-c-blue-1)">undergraduate CS student</span> diving deep into the world of computing.</p>
+                    <p ref="subheader" class="subheader">I'm an <span style="font-weight:700; color:var(--vt-c-blue-1)">undergraduate CS student</span> diving deep into the world of computing.</p>
                 </div>
             </div>
         </section>
@@ -65,20 +65,22 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
 import ListProject from "@/components/ListProject.vue";
-import PageLoader from "@/components/PageLoader.vue";
 
-export default {
-    name: "LandingPage",
+const header = ref(null);
+const subheader = ref(null);
+const photoProfile = ref(null);
 
-    components: {
-        ListProject,
-        PageLoader,
-    },
-    setup() {
-        const projects = ref([
+window.addEventListener("load", function() {
+    header.value.style.animationPlayState = "running";
+    subheader.value.style.animationPlayState = "running";
+    photoProfile.value.style.animationPlayState = "running";
+})
+
+
+const projects = ref([
             { 
                 id: 1, 
                 title: 'Femu', 
@@ -101,16 +103,28 @@ export default {
                 image: "./run-graphics.png",
             }
         ])
-        return {
-            projects
-        }
-    }
+</script>
 
+<script>
+export default {
+    name: "LandingPage",
 }
 </script>
 
 <style scoped>
 
+.header {
+    animation: reveal .8s cubic-bezier(0.22, 0.61, 0.36, 1) 1.6s backwards paused;
+}
+
+.subheader {
+    animation: reveal .8s cubic-bezier(0.22, 0.61, 0.36, 1) 2.1s backwards paused;
+}
+
+.photo-profile {
+    opacity: 0;
+    animation: bounceIn 1s 2.5s forwards paused;
+}
 
 .hello {
     position: relative;

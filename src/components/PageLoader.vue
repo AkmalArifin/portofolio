@@ -32,24 +32,8 @@ export default {
         z-index: 2;
         display: inline;
 
-        animation-name: load;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
+        animation: load .5s cubic-bezier(0.22, 0.61, 0.36, 1) .25s forwards;
+        animation-delay: 1s;
         animation-play-state: paused;
-        animation-fill-mode: forwards;
     }
-
-    @keyframes load {
-        0% {
-            top: 0px;
-        }
-        70% {
-            top: 0px;
-        }
-        100% {
-            top: 100vh;
-            display: none;
-        }
-    }
-    
 </style>
